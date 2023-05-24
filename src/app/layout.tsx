@@ -37,17 +37,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<meta
 					property='og:image'
 					content={
-						'https://mybroadband.co.za/news/wp-content/uploads/2015/07/Airbnb-logo.jpg'
+						'https://res.cloudinary.com/drypjfn7k/image/upload/v1684925418/Airbnb-logo_e8al1w.jpg'
 					}
 				/>
 				<meta
 					property='og:image:width'
-					content='1200'
+					content='600'
 				/>
 
 				<meta
 					property='og:image:height'
-					content='630'
+					content='400'
 				/>
 			</head>
 			<body className={font.className}>
