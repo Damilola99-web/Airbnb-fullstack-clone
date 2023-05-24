@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				/>
 				<meta
 					property='og:description'
-					content='Air bnb clone with nextjs 13 and tailwindcss. Book an airbnb, list your airbnb, and more.'
+					content='Airbnb clone with nextjs 13. Book an airbnb, list your airbnb, and more features.'
 				/>
 				<meta
 					property='og:image'
