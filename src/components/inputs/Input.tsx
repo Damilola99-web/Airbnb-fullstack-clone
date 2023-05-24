@@ -54,7 +54,7 @@ export const Input: FC<InputProps> = ({
                 peer-placeholder-shown:translate-y-0
                 peer-focus:-translate-y-4
                 peer-focus:scale-75
-                
+                ${errors[id] ? 'text-rose-500' : 'text-zinc-400'}
                 `}
 			>
 				{label}

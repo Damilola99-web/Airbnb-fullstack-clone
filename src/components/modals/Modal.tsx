@@ -105,6 +105,7 @@ export const Modal: FC<ModalProps> = ({
 										onclick={handleSubmit}
 									/>
 								</div>
+								{footer}
 							</div>
 						</div>
 					</div>
