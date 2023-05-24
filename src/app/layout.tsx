@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				/>
 				<meta
 					property='og:image'
-					content={'/images/airbnb.png'}
+					content={'/images/logo.png'}
 				/>
 			</head>
 			<body className={font.className}>
