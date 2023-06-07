@@ -81,12 +81,12 @@ export default function RentModal() {
 	}, [step]);
 
 	let bodyContent = (
-		<div className=' flex flex-col gap-8'>
+		<div className=' flex flex-col gap-8 w-full'>
 			<Heading
 				title='Which of these best describe your place?'
 				subtitle='Pick a category'
 			/>
-			<div className=' grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto w-full'>
+			<div className=' grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto'>
 				{categories.map((item) => (
 					<div
 						key={item.label}
@@ -106,7 +106,7 @@ export default function RentModal() {
 
 	if (step === STEPS.LOCATION) {
 		bodyContent = (
-			<div className=' flex flex-col gap-8'>
+			<div className=' flex flex-col gap-8 w-full'>
 				<Heading
 					title='Where is your place located?'
 					subtitle='Help guests find you'
