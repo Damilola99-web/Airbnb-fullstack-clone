@@ -1,8 +1,11 @@
 import '@/styles/globals.css';
 import { Nunito } from 'next/font/google';
-import Navbar from '../components/navbar/Navbar';
+import Navbar from '@/components/navbar/Navbar';
 import RegisterModal from '@/components/modals/RegisterModal';
 import { ToasterProvider } from '@/providers/ToasterProvider';
+import LoginModal from '@/components/modals/LoginModal';
+import getCurrentUser from '@/actions/getCurrentUser';
+import RentModal from '@/components/modals/RentModal';
 
 const font = Nunito({
 	subsets: ['latin'],
@@ -14,7 +17,8 @@ export const metadata = {
 	description: 'Air bnb clone',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+	const currentUser = await getCurrentUser();
 	return (
 		<html lang='en'>
 			<head>
@@ -28,11 +32,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				/>
 				<meta
 					property='og:title'
-					content='Air bnb clone'
+					content='Rashtech Airbnb'
 				/>
 				<meta
 					property='og:description'
-					content='Airbnb clone with nextjs 13. Book an airbnb, list your airbnb, and more features.'
+					content='Rashtech Airbnb. Book an airbnb, list your airbnb, and more features.'
 				/>
 				<meta
 					property='og:image'
@@ -52,8 +56,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			</head>
 			<body className={font.className}>
 				<ToasterProvider />
+				<RentModal />
+				<LoginModal />
 				<RegisterModal />
-				<Navbar />
+				<Navbar currentUser={currentUser} />
 				{children}
 			</body>
 		</html>

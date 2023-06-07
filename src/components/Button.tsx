@@ -1,6 +1,7 @@
 'use client';
 import React, { FC } from 'react';
 import { IconType } from 'react-icons';
+import { ImSpinner8 } from 'react-icons/im';
 
 interface ButtonProps {
 	label: string;
@@ -44,6 +45,7 @@ export const Button: FC<ButtonProps> = ({
 				/>
 			)}
 			{label}
+			{/* <ImSpinner8 size={24} className='  animate-spin absolute right-4 top-3' /> */}
 		</button>
 	);
 };

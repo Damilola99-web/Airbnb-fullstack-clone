@@ -1,7 +1,7 @@
 // export metadata
 export const metadata = {
-	title: 'Air bnb clone | Home',
-	description: 'Air bnb clone home page',
+	title: 'Airbnb | Home',
+	description: 'Airbnb home page',
 };
 
 export default function Home() {
