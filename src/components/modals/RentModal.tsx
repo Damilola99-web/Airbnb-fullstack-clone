@@ -52,6 +52,7 @@ export default function RentModal() {
 	const guestCount = watch('guestCount');
 	const roomCount = watch('roomCount');
 	const bathroomCount = watch('bathroomCount');
+	const imageUrl = watch('imageUrl');
 
 	const Map = useMemo(() => dynamic(() => import('../Map'), { ssr: false }), [location]);
 
@@ -165,7 +166,10 @@ export default function RentModal() {
 					title='Add a photo of your place'
 					subtitle='Show guests what your place looks like!'
 				/>
-				<ImageUpload />
+				<ImageUpload
+					onChange={(value) => setCustomValue('imageSrc', value)}
+					value={imageUrl}
+				/>
 			</div>
 		);
 	}

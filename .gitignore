@@ -4,4 +4,4 @@ node_modules
 *. pid
 .next
 .vscode
-
+*.env

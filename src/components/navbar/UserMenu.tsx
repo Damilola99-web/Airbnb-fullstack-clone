@@ -24,7 +24,7 @@ export default function UserMenu({ currentUser }: UserMenuProps) {
 	}, []);
 
 	const onRent = useCallback(() => {
-		if (currentUser) {
+		if (!currentUser) {
 			return loginModal.onOpen();
 		}
 		return rentModal.onOpen();
@@ -41,12 +41,14 @@ export default function UserMenu({ currentUser }: UserMenuProps) {
 				</div>
 				<div
 					onClick={toggleOpen}
-					className='p-4 md:py-1 md-px-2 border-[1px] border-neutral-200 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md transition'
+					className='p-4 md:py-2 md-px-2 border-[1px] border-neutral-200 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md transition'
 				>
-					<AiOutlineMenu />
-					<div className='hidden md:block'>
-						<Avatar src={currentUser?.image} />
-					</div>
+					<AiOutlineMenu size={20} />
+					{currentUser && (
+						<div className='hidden md:block'>
+							<Avatar src={currentUser?.image} />
+						</div>
+					)}
 				</div>
 			</div>
 			{isOpen && (
