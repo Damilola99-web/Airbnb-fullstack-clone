@@ -1,3 +1,4 @@
+"use client"
 import { SafeUser } from '@/types';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
