@@ -38,8 +38,9 @@ function RegisterModal() {
 			.post('/api/auth/register', data)
 			.then((res) => {
 				setLoading(false);
-
+				toast.success('Account created successfully.');
 				registerModal.onClose();
+				loginModal.onOpen();
 			})
 			.catch((err) => {
 				setLoading(false);
