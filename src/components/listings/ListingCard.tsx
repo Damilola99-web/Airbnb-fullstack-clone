@@ -1,4 +1,4 @@
-'use cllient';
+'use client';
 import { useCountries } from '@/hooks/useCountries';
 import { SafeUser, safeListing } from '@/types';
 import { Listing, Reservation } from '@prisma/client';

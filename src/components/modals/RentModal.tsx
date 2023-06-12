@@ -198,7 +198,7 @@ export default function RentModal() {
 					subtitle='Show guests what your place looks like!'
 				/>
 				<ImageUpload
-					onChange={(value) => setCustomValue('imageSrc', value)}
+					onChange={(value) => setCustomValue('imageUrl', value)}
 					value={imageUrl}
 				/>
 			</div>
